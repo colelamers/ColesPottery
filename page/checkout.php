@@ -5,7 +5,7 @@ namespace Website\page;
 require_once '../admin/init.php';
 require_once '../admin/setuppage.php';
 require_once '../admin/commonfunctions.php';
-require_once '../admin/SkHfV.php';
+require_once '../admin/SkHfV.php'; // Removed from repo because of Stripe Account keys
 
 use Website\admin; // one way to do it
 
@@ -170,7 +170,7 @@ function run(){
     try
     {
         //e.preventDefault();
-        var stripe = Stripe("' . admin\SkHfV::getSkJs() . '");
+        var stripe = Stripe("' . admin\SkHfV::getSkJs() . '"); // Removed from repo because of Stripe Account keys. This was also so I didnt need to have it in the php file.
         if ("1" === "1"){
             stripe.redirectToCheckout({
                 sessionId: "' . $session->id . '",
