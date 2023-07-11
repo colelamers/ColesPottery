@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^74\.208\.18\.52$
+RewriteRule ^(.*)$ http://www.colespottery.com/$1 [L,R=301]
